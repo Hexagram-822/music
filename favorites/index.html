@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins',sans-serif;
+        }
+        body{
+            background: url('背景.jpg') no-repeat center center fixed;
+            background-size: cover; 
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #0f0f0f;           
+            overflow: hidden;
+            backdrop-filter: blur(10px); 
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .container{
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container .card{
+            position: absolute;
+            width: 240px;
+            height: 360px;
+            background-color: #f72d7a;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgba(0, 0, 0, 0);
+            font-size: 8em;
+            font-weight: 700;
+            border: 10px solid rgba(0, 0, 0, .1);
+            transition: .5s;
+            transform-origin: 50% 100% ;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, .1);
+            transform-style: preserve-3d;
+        }
+        .container .card.flipped {
+            transform: rotateY(180deg);
+            transition: transform 0.5s;
+        }
+        .container .card div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            backface-visibility: hidden;
+            transition: transform 0.5s; 
+            border-radius: 8px;
+            border: 10px solid rgba(0, 0, 0, .1);
+            background-color: #fff;
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            overflow: hidden; 
+        }
+        .container .card div.back {
+            transform: rotateY(180deg);
+            backface-visibility: visible;
+            display: flex; 
+        }
+        .container .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block; 
+        }
+        .container:hover .card{
+            transform: rotate(calc(var(--i) * 5deg)) 
+                       translate(calc(var(--i) * 120px),-50px);
+            box-shadow: 0 15px 50px rgba(0, 0, 0, .25);
+            color: rgba(0, 0, 0, .25);
+            cursor: pointer;
+        }
+        .container:active .card:not(:active){
+            background-color: #333;
+        }
+        .container .card:active{
+            translate: calc(var(--i) * 20px) -50px;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card" style="--i:-4">
+            <div>1</div>
+            <div class="back"><img src="称为.jpg" alt="Image 1"></div>
+        </div>
+        <div class="card" style="--i:-3">
+            <div>2</div>
+            <div class="back"><img src="稻香.jpg" alt="Image 2"></div>
+        </div>
+        <div class="card" style="--i:-2">
+            <div>3</div>
+            <div class="back"><img src="邓紫棋,jpg.jpg" alt="Image 3"></div>
+        </div>
+        <div class="card" style="--i:-1">
+            <div>4</div>
+            <div class="back"><img src="取舍.jpg" alt="Image 4"></div>
+        </div>
+        <div class="card" style="--i:0">
+            <div>5</div>
+            <div class="back"><img src="嘉宾.jpg" alt="Image 5"></div>
+        </div>
+        <div class="card" style="--i:1">
+            <div>6</div>
+            <div class="back"><img src="后陡门的夏.jpg" alt="Image 6"></div>
+        </div>
+        <div class="card" style="--i:2">
+            <div>7</div>
+            <div class="back"><img src="刘宇.jpg" alt="Image 7"></div>
+        </div>
+        <div class="card" style="--i:3">
+            <div>8</div>
+            <div class="back"><img src="如果爱忘了.jpg" alt="Image 8"></div>
+        </div>
+        <div class="card" style="--i:4">
+            <div>9</div>
+            <div class="back"><img src="薛之谦.jpg" alt="Image 9"></div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card');
+    
+            cards.forEach(card => {
+                card.addEventListener('click', function() {
+                    if (card.classList.contains('flipped')) {
+                        card.classList.remove('flipped');
+                        card.style.transform = `rotateY(0deg)`;
+                    } else {
+                        card.classList.add('flipped');
+                        card.style.transform = `rotateY(180deg)`;
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

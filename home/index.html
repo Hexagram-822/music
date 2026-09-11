@@ -1,0 +1,374 @@
+<html lang="en"></html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">   
+    <title>Musi-Galaxy</title>
+  </head>
+
+  <body>
+    <header>
+<!-- 音乐榜 -->
+      <div class="menu_side">
+        <h1> Playlist </h1>
+        <div class="playlist">
+          <h4 class="active"><span></span>
+            <i class="bi bi-music-note-beamed"></i> Playlist
+          </h4>
+          <!--<h4><span></span>
+            <i class="bi bi-music-note-beamed"></i> Last Listening
+          </h4>-->
+          <h4><span></span>
+            <button class="btn" onclick="recommended()"><i class="bi bi-music-note-beamed"></i>Reconmended</button>
+          </h4>
+        </div>
+<!-- menu_song -->
+        <div class="menu_song">
+          <li class="songItem">
+            <span> 01 </span>
+            <img src="./img/1.jpg" alt="周杰伦">
+            <h5> On My Way
+              <div class="subtitle"> 周杰伦 </div>
+            </h5>
+            <i class="bi playListPlay bi-play-circle-fill" id="1"></i>
+          </li>
+
+          <li class="songItem">
+            <span> 02 </span>
+            <img src="./img/1.jpg" alt="周杰伦">
+            <h5> On My Way
+              <div class="subtitle"> 周杰伦 </div>
+            </h5>
+            <i class="bi playListPlay bi-play-circle-fill" id="2"></i>
+          </li>
+
+          <li class="songItem">
+            <span> 03 </span>
+            <img src="./img/1.jpg" alt="周杰伦">
+            <h5> On My Way
+              <div class="subtitle"> 周杰伦</div>
+            </h5>
+            <i class="bi playListPlay bi-play-circle-fill" id="3"></i>
+          </li>
+
+          <li class="songItem">
+            <span> 04 </span>
+            <img src="./img/1.jpg" alt="周杰伦">
+            <h5> On My Way
+              <div class="subtitle"> 周杰伦s </div>
+            </h5>
+            <i class="bi playListPlay bi-play-circle-fill" id="4"></i>
+          </li>
+
+          <li class="songItem">
+            <span> 05 </span>
+            <img src="./img/1.jpg" alt="周杰伦">
+            <h5> On My Way
+              <div class="subtitle"> 周杰伦 </div>
+            </h5>
+            <i class="bi playListPlay bi-play-circle-fill" id="5"></i>
+          </li>
+
+          <li class="songItem">
+            <span> 06 </span>
+            <img src="./img/1.jpg" alt="周杰伦">
+            <h5> On My Way
+              <div class="subtitle"> 周杰伦 </div>
+            </h5>
+            <i class="bi playListPlay bi-play-circle-fill" id="6"></i>
+          </li>
+          
+          <li class="songItem">
+            <span> 07 </span>
+            <img src="./img/1.jpg" alt="周杰伦">
+            <h5> On My Way
+              <div class="subtitle"> 周杰伦</div>
+            </h5>
+            <i class="bi playListPlay bi-play-circle-fill" id="7"></i>
+          </li>
+
+          <li class="songItem">
+            <span> 08 </span>
+            <img src="./img/1.jpg" alt="周杰伦">
+            <h5> On My Way
+              <div class="subtitle">周杰伦</div>
+            </h5>
+            <i class="bi playListPlay bi-play-circle-fill" id="8"></i>
+          </li>
+        </div>
+      </div>
+<!-- song_side -->
+      <div class="song_side">
+        <nav>
+          <ul>
+            <li>  Discover <span></span> </li>
+            <li> My Library </li>
+            <li> Radio </li>
+          </ul>
+          <!-- 46:00 -->
+<!-- search -->
+          <div class="search">
+            <i class="bi bi-search"></i> 
+            <input type="text" placeholder="search music...">
+          </div>
+          
+          <div class="user">
+            <img src="./img/33.jpg" alt="user" title="KDS CODER(Jahid Khan)">
+          </div>
+        </nav>
+        
+        <div class="content">
+
+<!-- 轮播图 -->        
+          <div class="out">
+            <div class="inner">
+              <div class="img">
+                <img src="./img/刘宇.jpg "id="33" />
+              </div>
+              <div class="img">
+                <img src="./img/取舍.jpg" id="34" />
+              </div>
+              <div class="img">
+                <img src="./img/嘉宾.jpg" id="35" />
+              </div>
+              <div class="img">
+                <img src="./img/山河图.jpg" id="36" />
+              </div>
+              <div class="img">
+                <img src="./img/张杰.jpg" id="37" />
+              </div>
+              <div class="img">
+                <img src="./img/薛之谦.jpg" id="38" />
+              </div>
+              <div class="img">
+                <img src="./img/邓紫棋,jpg.jpg" id="39" />
+              </div>
+            </div>
+            <div class="arrow">
+              <i class="fas fa-chevron-left left"></i>
+              <i class="fas fa-chevron-right right"></i>
+            </div>
+            <div class="button">
+              <p></p>
+              <p></p>
+              <p></p>
+              <p></p>
+              <p></p>
+              <p></p>
+              <p></p>
+            </div>
+          </div>
+      
+        </div>
+
+<!-- popular_song -->
+        <div class="popular_song">
+          <div class="h4">
+            <h4> Pop Song </h4>
+            <div class="btn_s">
+              <i id="left_scroll" class="bi bi-arrow-left-short"></i>
+              <i id="right_scroll" class="bi bi-arrow-right-short"></i>
+            </div>
+          </div>
+
+          <div class="pop_song">
+            <li class="songItem">
+              <div class="img_play">
+                <img src="./img/1.jpg" alt="周杰伦">
+                <i class="bi playListPlay bi-play-circle-fill" id="9"></i>
+              </div>
+              <h5> 稻香
+                <br>
+                <div class="subtitle"> 周杰伦 </div>
+              </h5>
+            </li>
+
+            <li class="songItem">
+              <div class="img_play">
+                <img src="./img/1.jpg" alt="alan">
+                <i class="bi playListPlay bi-play-circle-fill" id="10"></i>
+              </div>
+              <h5> 稻香
+                <br>
+                <div class="subtitle"> 周杰伦 </div>
+              </h5>
+            </li>
+
+            <li class="songItem">
+              <div class="img_play">
+                <img src="./img/1.jpg" alt="alan">
+                <i class="bi playListPlay bi-play-circle-fill" id="11"></i>
+              </div>
+              <h5> 稻香
+                <br>
+                <div class="subtitle"> 周杰伦 </div>
+              </h5>
+            </li>
+
+            <li class="songItem">
+              <div class="img_play">
+                <img src="./img/1.jpg" alt="alan">
+                <i class="bi playListPlay bi-play-circle-fill" id="12"></i>
+              </div>
+              <h5> 稻香
+                <br>
+                <div class="subtitle"> 周杰伦 </div>
+              </h5>
+            </li>
+
+            <li class="songItem">
+              <div class="img_play">
+                <img src="./img/1.jpg" alt="alan">
+                <i class="bi playListPlay bi-play-circle-fill" id="13"></i>
+              </div>
+              <h5> 稻香
+                <br>
+                <div class="subtitle"> 周杰伦 </div>
+              </h5>
+            </li>
+
+            <li class="songItem">
+              <div class="img_play">
+                <img src="./img/1.jpg" alt="alan">
+                <i class="bi playListPlay bi-play-circle-fill" id="14"></i>
+              </div>
+              <h5> 稻香
+                <br>
+                <div class="subtitle"> 周杰伦 </div>
+              </h5>
+            </li>
+
+            <li class="songItem">
+              <div class="img_play">
+                <img src="./img/1.jpg" alt="alan">
+                <i class="bi playListPlay bi-play-circle-fill" id="15"></i>
+              </div>
+              <h5> 稻香
+                <br>
+                <div class="subtitle">周杰伦 </div>
+              </h5>
+            </li>
+
+            <li class="songItem">
+              <div class="img_play">
+                <img src="./img/1.jpg" alt="alan">
+                <i class="bi playListPlay bi-play-circle-fill" id="16"></i>
+              </div>
+              <h5> 稻香
+                <br>
+                <div class="subtitle"> 周杰伦 </div>
+              </h5>
+            </li>
+
+            <li class="songItem">
+              <div class="img_play">
+                <img src="./img/1.jpg" alt="alan">
+                <i class="bi playListPlay bi-play-circle-fill" id="17"></i>
+              </div>
+              <h5> 稻香
+                <br>
+                <div class="subtitle"> 周杰伦 </div>
+              </h5>
+            </li>
+
+            <li class="songItem">
+              <div class="img_play">
+                <img src="./img/1.jpg" alt="alan">
+                <i class="bi playListPlay bi-play-circle-fill" id="18"></i>
+              </div>
+              <h5> 稻香
+                <br>
+                <div class="subtitle"> 周杰伦 </div>
+              </h5>
+            </li>
+
+            <li class="songItem">
+              <div class="img_play">
+                <img src="./img/1.jpg" alt="alan">
+                <i class="bi playListPlay bi-play-circle-fill" id="19"></i>
+              </div>
+              <h5> 稻香
+                <br>
+                <div class="subtitle"> 周杰伦 </div>
+              </h5>
+            </li>
+          </div>
+        </div>
+
+<!-- popular_artists -->
+        <div class="popular_artists">
+          <div class="h4">
+            <h4> Pop Artists </h4>
+            <div class="btn_s">
+              <i id="left_scrolls" class="bi bi-arrow-left-short"></i>
+              <i id="right_scrolls" class="bi bi-arrow-right-short"></i>
+            </div>
+          </div>
+          <div class="item">
+            <li> <img src="./img/20.jpg" alt="周杰伦" title="周杰伦" id="20"> </li>
+            <li> <img src="./img/21.jpg" alt="陈粒" title="陈粒" id="21"> </li>
+            <li> <img src="./img/22.jpg" alt="薛之谦" title="薛之谦" id="22"> </li>
+            <li> <img src="./img/23.jpg" alt="胡夏" title="胡夏" id="23"> </li>
+            <li> <img src="./img/24.jpg" alt="黄子弘凡" title="黄子弘凡" id="24"> </li>
+            <li> <img src="./img/25.jpg" alt="周深" title="周深" id="25"> </li>
+            <li> <img src="./img/26.jpg" alt="张靓颖" title="张靓颖" id="26"> </li>
+            <li> <img src="./img/27.jpg" alt="张杰" title="张杰" id="27"> </li>
+            <li> <img src="./img/28.jpg" alt="张远" title="张远" id="28"> </li>
+            <li> <img src="./img/29.jpg" alt="许嵩" title="许嵩" id="29"> </li>
+            <li> <img src="./img/30.jpg" alt="凤凰传奇" title="凤凰传奇" id="30"> </li>
+            <li> <img src="./img/31.jpg" alt="米津玄师" title="米津玄师" id="31"> </li>
+            <li> <img src="./img/32.jpg" alt="毛不易" title="毛不易" id="32"> </li>
+          </div>
+        </div>
+          
+      </div>
+
+
+<!-- master_play -->
+      <div class="master_play">
+        <div class="wave">
+          <div class="wave1"></div>
+          <div class="wave1"></div>
+          <div class="wave1"></div>
+        </div>
+
+        <img src="./img/1.jpg" alt="周杰伦" id="poster_master_play">
+
+        <h5 id="title"> 稻香 <br>
+          <div class="subtitle"> 周杰伦 </div>
+        </h5>
+
+        <div class="icon">
+          <i class="bi bi-skip-start-fill" id="back"></i>
+          <i class="bi bi-play-fill" id="masterPlay"></i>
+          <i class="bi bi-skip-end-fill" id="next"></i>
+        </div>
+
+        <span id="currentStart"> 0:00 </span>
+
+        <div class="bar">
+          <input type="range" id="seek" min="0" value="0" max="100">
+          <div class="bar2" id="bar2"></div>
+          <div class="dot"></div>
+        </div>
+        
+        <span id="currentEnd"> 0:00 </span>
+
+        <div class="vol">
+          <i class="bi bi-volume-down-fill" id="vol_icon"></i>
+          <input type="range" id="vol" min="0" value="30" max="100">
+          <div class="vol_bar"></div>
+          <div class="dot" id="vol_dot"></div>
+        </div>
+
+      </div>
+
+    </header>
+
+    <script src="main.js"></script>
+
+  </body>
+
+</html>
